@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8" />
+        <title>{% block title %}Ajout Citation{% endblock %}</title>
+        {% block stylesheets %}
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset ('bundles/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset ('bundles/css/main.css')}}">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}
+        {% if id is defined%}
+            {{form_start(form,{'attr':{'action':path('update',{'id':id})}})}}
+        {% else%}
+            {{form_start(form,{'attr':{'action':path('valid')}})}}
+        {%endif%}
+         {{form_rest(form)}}
+        {{form_end(form)}}
+{% endblock %}
+        {% block javascripts %}<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="{{ asset ('bundles/script/unslider.js')}}"></script>
+        <script src="{{ asset ('bundles/script/choiceslide.js')}}"></script>{% endblock %}
+    </body>
+</html>
+

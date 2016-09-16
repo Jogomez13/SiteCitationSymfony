@@ -1,0 +1,23 @@
+{% extends "AdminBundle:Default:admin.html.twig" %}
+{% block title %}Listes Citation{% endblock %}
+{% block body %}
+    {%for liste in citations %}
+        <div>
+
+            <li>
+                <p class="citation">
+                    {{liste.citation}}
+                </p>
+
+                <p class="nom">
+                    <strong>
+                        {{liste.auteur}}
+                    </strong>
+                </p>
+            </li>
+        </div>
+      <a href="{{path("delete",{'id':liste.id})}}">Supprimer une citation</a>
+      <a href="{{path("edit",{'id':liste.id})}}">Modifier une citation</a>
+    {%endfor%}
+    <a href="{{path("add")}}">Ajouter une citation</a>
+{% endblock %}

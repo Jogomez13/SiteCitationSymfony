@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8" />
+        <title>{% block title %}Site Citation{% endblock %}</title>
+        {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset ('bundles/css/unslider-dots.css')}}">
+     <link rel="stylesheet" href="{{ asset ('bundles/css/unslider.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset ('bundles/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset ('bundles/css/main.css')}}">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}<div class="container">
+
+<div class="contenu-quote">
+<h1>Citation pour se motiver</h1>
+      <div class="automatic-slider">
+	<ul id="slider">
+		<li><p class="citation">
+      Un pessimiste voit la difficulté dans chaque opportunité, un optimiste voit l’opportunité dans chaque difficulté.
+    </p>
+
+      <p class="nom"><strong> Winston Churchill</strong></p></li>
+
+      <li><p class="citation">
+        Jamais jamais jamais. N’abandonnez jamais.
+      </p>
+
+        <p class="nom"><strong> Winston Churchill</strong></p></li>
+
+        <li><p class="citation">
+          Le succès c’est d’aller d’échec en échec sans perdre son enthousiasme.
+        </p>
+
+          <p class="nom"><strong>Albert Schweitzer</strong></p></li>
+
+          <li><p class="citation">
+Le succès n’est pas la clé du bonheur. Le bonheur est la clé du succès. Si vous aimez ce que vous faites, vous réussirez.
+          </p>
+
+            <p class="nom"><strong>Mario Puzo</strong></p></li>
+
+            <li><p class="citation">
+Si vous ne courrez pas après ce que vous voulez, vous ne l’aurez jamais. Si vous ne demandez pas, la réponse sera toujours non. Si vous ne faites pas un pas en avant, vous restez toujours au même endroit
+            </p>
+
+              <p class="nom"><strong>Nora Roberts</strong></p></li>
+
+              <li><p class="citation">
+                Le succès c’est tomber sept fois, se relever huit.
+              </p>
+
+                <p class="nom"><strong>Proverbe japonais</strong></p></li>
+              
+  {# {%for liste in citations %}
+        <div>
+
+            <li>
+                <p class="citation">
+                    {{liste.citation}}
+                </p>
+
+                <p class="nom">
+                    <strong>
+                        {{liste.auteur}}
+                    </strong>
+                </p>
+            </li>
+        </div>
+    {%endfor%}#}
+
+	</ul>
+</div>
+</div>
+</div>{% endblock %}
+        {% block javascripts %}<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="{{ asset ('bundles/script/unslider.js')}}"></script>
+        <script src="{{ asset ('bundles/script/choiceslide.js')}}"></script>{% endblock %}
+    </body>
+</html>
+

@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin : 0;
+}
+body {
+  color : #769FCD;
+  background-color: #F7FBFC;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  color : #415F77;
+}
+
+#slider {
+  margin-top: 100px;
+}
+
+.citation {
+  font-size : 2.8em;
+}
+.nom{
+  color: #415F77;
+  font-size : 2em;
+}
+
+.unslider-arrow {
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
